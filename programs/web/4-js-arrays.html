@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <h1>Arrays</h1>
+
+    <script>
+        marks = []
+        console.log("append 1 ",marks.push(100))
+        console.log("append 2 ",marks.push(200))
+        console.log("append 3 ",marks.push(300))
+        console.log("marks array ",marks)
+        console.log("pop 1 ",marks.pop())
+        console.log("array  length ",marks.length)
+        console.log('loop')
+        for (i=0;i<marks.length;i++){
+            console.log("marks ",marks[i])
+        }   
+
+        console.log("higher order function")
+        marks.forEach(mark => {
+            console.log(mark)
+        });
+        marks.push(500)
+        marks.push(600)
+        marks.push(700)
+        console.log("updated marks ",marks)
+        marks.unshift(-100)
+        console.log("after unshift -100 is added to the 0th index of the array ",marks)
+        marks.shift()
+        console.log("shift - removes element at the 0 th index",marks)
+
+        courses =['html','css','js','ajax']
+        courses.sort()
+        console.log(" after sorting- ascending order ",courses)
+        courses.reverse()
+        console.log("  sorting descending order",courses)
+
+    </script>
+    
+</body>
+</html>
