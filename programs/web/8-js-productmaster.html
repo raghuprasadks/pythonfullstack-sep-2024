@@ -19,29 +19,62 @@
             <label>Price</label>
             <input type="number" id="price"/><br>
             <button onclick="addProduct()">Add Product</button>
-
+            <button onclick="displayProducts()">Display Products</button>
+        </div>
+        <div>
+            <table id="tbl">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Supplier</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>               
+            </table>
         </div>
     </div>
     <script>
 
         products = []
-
         function product(code,name,supplier,price){
             this.code = code
             this.name = name
             this.supplier = supplier
             this.price = price
         }
-
         function addProduct(){
             let code = document.getElementById('code').value
             let name = document.getElementById('name').value
             let supplier = document.getElementById('supplier').value
             let price = document.getElementById('price').value
-            let prod = {code:code,name:name,supplier:supplier,price:price}
+            //let prod = {code:code,name:name,supplier:supplier,price:price}
+            let prod = new product(code,name,supplier,price)
             console.log("product ",prod)
             products.push(prod)
             console.log("products ",products)   
+        }
+
+        function displayProducts(){
+            let tbl = document.getElementById('tbl')
+            let tbody = document.createElement('tbody')
+            tbl.appendChild(tbody)
+            products.forEach(product => {
+                let tr = document.createElement('tr')
+                tbody.appendChild(tr)
+                let td1 = document.createElement('td')
+                td1.innerHTML = product.code
+                tr.appendChild(td1)
+                let td2 = document.createElement('td')
+                td2.innerHTML = product.name
+                tr.appendChild(td2)
+                let td3 = document.createElement('td')
+                td3.innerHTML = product.supplier
+                tr.appendChild(td3)
+                let td4 = document.createElement('td')
+                td4.innerHTML = product.price
+                tr.appendChild(td4)
+            });
         }
 
     </script>
