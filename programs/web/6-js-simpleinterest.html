@@ -18,7 +18,6 @@
         <p id="result"></p>
     </div>
     <script>
-
         function calculateSimpleInterest(){
             var principal = document.getElementById("principal").value;
             var roi = document.getElementById("roi").value;
@@ -26,13 +25,18 @@
             var result = (principal * roi * time) / 100;
             document.getElementById("result").innerHTML = "Simple Interest is " + result;
             reset()
+            //resetarrow()
         }
-
         function reset(){
             document.getElementById("principal").value = "";
             document.getElementById("roi").value = "";
+            document.getElementById("time").value = "";            
+        }
+
+        resetarrow = ()=>{
+            document.getElementById("principal").value = "";
+            document.getElementById("roi").value = "";
             document.getElementById("time").value = "";
-            
         }
 
     </script>
