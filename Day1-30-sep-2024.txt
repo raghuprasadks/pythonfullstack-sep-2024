@@ -1,0 +1,82 @@
+Python
+web development
+html/css/java script
+ajax
+react
+
+Fullstack web development
+
+front end and back end
+
+fullstack development tech stack
+
+1. Java full stack developer
+jsp
+html,css,js,ajax - 
+js framework/libraries - jquery,react,angular
+java,spring,spring boot,jpi,database
+2. python fullstack developer
+html,css,js,ajax,react,angular
+python,flask,django,database
+3. Java Script full stack developer
+back end - js,node.js,express.js,mongodb
+MySQL
+html,css,java script,ajax
+react,angular
+4. .net fullstack developer
+c#,.net,web api,ms-sql server
+html,css,js,ajax,react,anglar
+
+
+1. Visual studio code
+2. download node.js
+
+download visual studio code
+
+Java Script
+Programming language
+Ecma Script 
+browser
+scripting language
+
+web programming
+html - elements - design the screen
+css - styling 
+java script - interact
+
+Java Script
+1. Getting started
+2. Data types
+3. Operators
+4. loops and conditional statements
+5. functions - normal functions,arrow functions
+6. arrays,methods,higher order functions
+7. Object, object constructor
+
+create fullstack/web folder in your system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
