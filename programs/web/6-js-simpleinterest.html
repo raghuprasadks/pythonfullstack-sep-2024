@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <div>
+        <h1>Simple Interest</h1>
+        <label>Enter Principal </label>
+        <input type="text" id="principal" name = "principal"></input><br>
+        <label>Enter Rate Of Interest </label>
+        <input type="text" id="roi" name = "roi"></input><br>
+        <label>Time in years </label>
+        <input type="text" id="time" name = "time"></input><br>
+        <button onclick="calculateSimpleInterest()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script>
+
+        function calculateSimpleInterest(){
+            var principal = document.getElementById("principal").value;
+            var roi = document.getElementById("roi").value;
+            var time = document.getElementById("time").value;
+            var result = (principal * roi * time) / 100;
+            document.getElementById("result").innerHTML = "Simple Interest is " + result;
+            reset()
+        }
+
+        function reset(){
+            document.getElementById("principal").value = "";
+            document.getElementById("roi").value = "";
+            document.getElementById("time").value = "";
+            
+        }
+
+    </script>
+    
+</body>
+</html>
