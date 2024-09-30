@@ -56,7 +56,15 @@ Java Script
 create fullstack/web folder in your system
 
 
+Day 1 - Java Script
+Day 2 - AJAX,React
+Day 3 - React
+Day 4 - Python/Flask - API's
+Day 5 - Flask with DB - Fullstack
+Day 6 - Fullstack
 
+9.30 to 1 pm
+1.45 to 4.30 pm
 
 
 
