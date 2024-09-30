@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <script>
+
+        student = {
+            name : 'sachin',
+            age : 25,
+            course : 'python full stack',
+            marks :20
+        }
+        console.log(" value of student is ",student)
+        console.log(" data type of student is ",typeof(student))
+        console.log(" student name ",student.name)
+        console.log(" student age ",student['age'])
+        console.log(" student course ",student.course)
+
+        student['email'] = 'sachin@gmail.com'
+        console.log(" student1 - after adding email ",student)
+
+        students=[
+            {
+                name : 'sachin',
+                age : 25,
+                course : 'python full stack',
+                marks :10
+            },
+            {
+                name : 'kumar',
+                age : 26,
+                course : 'java full stack',
+                marks :13
+            },
+            {
+                name : 'sachin',
+                age : 25,
+                course : 'python full stack',
+                marks :20
+            }            
+        ]
+        console.log(" students array ",students)
+
+        console.log("display students who has scored less than 15 marks")   
+
+        for (i=0;i<students.length;i++){
+            if (students[i].marks < 15){
+                console.log(" student ",students[i])
+            }
+        }
+
+        console.log("for each")
+        students.forEach(student => {
+            if(student.marks<15){
+                console.log(" student ",student)
+            }
+            
+        });
+
+        console.log("object in java script using object constructor")
+
+        function product(code,name,supplier,price){
+            this.code = code
+            this.name = name
+            this.supplier = supplier
+            this.price = price
+            this.info =function(){
+                return this.code + ' ' + this.name + ' ' + this.supplier + ' ' + this.price
+            }
+        }
+
+        product1 = new product(101,'laptop','dell',85000)
+        product2 = new product(102,'mobile','samsung',65000)
+        product3 = new product(103,'tv','sony',65000)
+        products=[]
+        products.push(product1)
+        products.push(product2)
+        products.push(product3)
+        console.log(" products array ",products)
+
+        totalprice = 0
+        products.forEach(product => {
+            totalprice = totalprice + product.price
+        });
+        console.log(" total price of all products ",totalprice)
+
+        console.log("info method")
+        products.forEach(product => {
+            console.log(" product info ",product.info())
+        });
+    </script>
+       
+</body>
+</html>
