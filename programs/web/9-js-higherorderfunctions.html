@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+<body>
+    <h1>Higher Order Functions</h1>
+
+    <script>
+
+        marks = [12,24,16,9,18,29,11,14]
+        for (i=0; i<marks.length; i++){
+            //console.log(marks[i])
+           // marks[i] = marks[i] + 1
+        }
+        console.log(marks)
+
+        function addOne(mark,index,array){
+            console.log("element",mark)
+            console.log("index",index)
+            console.log("array",array)
+            return mark + 1
+        }
+        aftergrace = marks.map(addOne)
+        console.log("original array",marks)
+        console.log("after grace ",aftergrace)
+        console.log("map with arrow function")
+        updatedmarks = marks.map((mark) => mark + 1)
+        console.log(updatedmarks)
+        console.log("filter with arrow function")
+        passedmarks = marks.filter((mark) => mark > 15)
+        console.log(passedmarks)
+
+        products=[
+            {name:"apple",price:20},
+            {name:"banana",price:10},
+            {name:"orange",price:15},
+            {name:"grapes",price:30},
+            {name:"mango",price:25}
+        ]   
+
+        afterfilter = products.filter((product) => product.price > 15)
+        console.log(afterfilter)
+
+    </script>
+</body>
+</html>

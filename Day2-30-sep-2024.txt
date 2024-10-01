@@ -1,0 +1,6 @@
+Agenda:
+1. Recap
+2. Higher Order functions - map,filter
+3. AJAX
+4. Download and install postman
+5. React
