@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+</head>
+<body onload="gettodosfetchapi()">
+<h1>Todos</h1>
+ <script>
+
+    function gettodos(){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','https://jsonplaceholder.typicode.com/todos',true);
+        xhr.onload = function(){
+            if(this.status == 200){
+                var todos = JSON.parse(this.responseText);
+                var output = '';
+                for(var i in todos){
+                    output += `
+                    <div>
+                        <h3>${todos[i].title}</h3>
+                        <p>Completed: ${todos[i].completed}</p>
+                    </div>
+                    `;
+                }
+                document.body.innerHTML = output;
+            }
+        }
+        xhr.send();
+    }
+
+    function gettodosfetchapi(){
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(res => res.json())
+        .then(data => {
+            var output = '';
+            data.forEach(function(todo){
+                output += `
+                    <div>
+                        <h3>${todo.title}</h3>
+                        <p>Completed: ${todo.completed}</p>
+                    </div>
+                `;
+            });
+            document.body.innerHTML = output;
+        })
+    }
+ </script>   
+</body>
+</html>

@@ -1,6 +1,17 @@
 Agenda:
 1. Recap
 2. Higher Order functions - map,filter
-3. AJAX
-4. Download and install postman
+3. AJAX - Asynchronous Java Script and xml
+Synchronous vs asynchronous
+https://www.w3schools.com/js/js_ajax_intro.asp
+https://jsonplaceholder.typicode.com/
+https://jsonplaceholder.typicode.com/todos - api - restful
+https://jsonplaceholder.typicode.com/users - api
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+
+4. Download and install postman - api testing
+https://www.postman.com/downloads/
+
 5. React
