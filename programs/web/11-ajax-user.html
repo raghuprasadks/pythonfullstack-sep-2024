@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body onload="getUsers()">
+    <!--
+    <button onclick="getUsers()">Get Users</button>
+    -->
+    <h1>Users</h1>
+    <table id="tbldata">
+    </table>
+   <script>
+
+    function getUsers(){
+        console.log('getUsers')
+        let url = 'https://jsonplaceholder.typicode.com/users';
+        fetch(url)
+        .then(res => res.json())
+       // .then(data => console.log(data))
+       .then(data=>displayUsers(data))
+    }
+
+    function displayUsers(data){
+        console.log("display users")
+        header ="<tr><th>Name</th><th>Email</th><th>City</th><th>Phone</th><th>Company Name</th></tr>";
+        document.getElementById('tbldata').innerHTML = header;
+        for (i=0;i<data.length;i++){
+            let row = `<tr>
+            <td>${data[i].name}</td>
+            <td>${data[i].email}</td>
+            <td>${data[i].address.city}</td>
+            <td>${data[i].phone}</td>
+            <td>${data[i].company.name}</td>
+            </tr>`;
+            document.getElementById('tbldata').innerHTML += row;
+        }
+    }
+   </script> 
+</body>
+</html>
