@@ -15,3 +15,45 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 https://www.postman.com/downloads/
 
 5. React
+
+java script library
+
+program,library and framework
+
+java, spring as framework
+facebook
+
+angular - google
+
+component
+
+SPA - Single Page Application
+index.html
+
+interface with back end
+fetch api
+axios
+sty
+
+
+node.js
+server side java script run time environment
+
+npm - node package manager
+npx - node package executor
+
+download and install node.js
+node --version
+npx create-react-app reactbasics
+
+npm -g i npm
+
+cd reactbasics
+npm start
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+JSX - Java Script and XML
+
+
+

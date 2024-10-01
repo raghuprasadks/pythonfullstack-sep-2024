@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+</head>
+<body>
+
+    <h1>Posts</h1>
+    <p id="pid"></p>
+
+    <script>
+        post={
+            id:1,
+            title:'test 1',
+            likes:10,
+            comments:5
+        }
+        document.getElementById("pid").innerHTML ="id : "+post.id + " title :"+post.title +" Likes : "+post.likes + " comments : "+post.comments
+       // document.getElementById("pid").innerHTML =`id : ${post.id}  title :${post.title}  Likes : ${post.likes} comments : ${post.comments} `
+    </script>
+    
+</body>
+</html>
