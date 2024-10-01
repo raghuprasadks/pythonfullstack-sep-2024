@@ -43,8 +43,7 @@
 
         afterfilter = products.filter((product) => product.price > 15)
         console.log(afterfilter)
-        console.log("reduce with arrow function")
-
+        
         console.log("total marks - regular way")
         total = 0
         for (i=0;i<marks.length;i++)
@@ -53,8 +52,7 @@
         }
 
         console.log("total marks",total)
-
-        
+        console.log("reduce with arrow function")
         total = marks.reduce((total,mark) => total + mark,0)
         console.log("total marks",total)
     </script>
