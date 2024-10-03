@@ -7,6 +7,7 @@ import { FunctionComponent } from './components/FunctionComponent';
 import PropertyDemo from './components/PropertyDemo';
 import ClassComponent from './components/ClassComponent';
 import Car from './components/Car';
+import SimpleInterestCalculator from './components/SimpleInterestCalculator';
 //import FunctionComponent from './components/FunctionComponent';
 
 function App() {
@@ -37,8 +38,10 @@ function App() {
       <img src='' height=100 width=100>
       <PropertyDemo data={ipldata}></PropertyDemo>
       <ClassComponent/>
+      <Car/>
        */}
-       <Car/>
+       <SimpleInterestCalculator/>
+       
        
        
     </div>

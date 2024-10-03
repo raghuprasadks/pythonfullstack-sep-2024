@@ -56,3 +56,20 @@ built-in proper know as state
 this.state
 built- in functionality to change the state
 setState()
+
+
+function based components
+hooks
+
+useState
+useEffect
+
+component to calculate simple interest
+using function based component
+
+principal
+roi
+time
+<button>Calculate</button>
+
+
