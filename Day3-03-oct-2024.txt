@@ -49,3 +49,10 @@ create components inside src folder
 
 hooks,events,properties,
 integration with backend api
+
+
+class based component
+built-in proper know as state
+this.state
+built- in functionality to change the state
+setState()

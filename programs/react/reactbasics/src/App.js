@@ -5,6 +5,8 @@ import Content from './Content';
 import Ipl from './Ipl';
 import { FunctionComponent } from './components/FunctionComponent';
 import PropertyDemo from './components/PropertyDemo';
+import ClassComponent from './components/ClassComponent';
+import Car from './components/Car';
 //import FunctionComponent from './components/FunctionComponent';
 
 function App() {
@@ -33,8 +35,11 @@ function App() {
       <FunctionComponent/>
       <PropertyDemo/>
       <img src='' height=100 width=100>
+      <PropertyDemo data={ipldata}></PropertyDemo>
+      <ClassComponent/>
        */}
-       <PropertyDemo data={ipldata}></PropertyDemo>
+       <Car/>
+       
        
     </div>
   );
