@@ -1,0 +1,51 @@
+Agenda:
+1. Recap
+install node.js
+npm
+npx
+command to create project
+npx create-react-app <name of the app>
+npx create-react-app reactbasics
+a folder with the name reactbasics
+is created
+package.json
+dependencies
+script : npm start
+node-modules
+two files 
+public - index.html
+<div id="root"></div>
+index.js
+react dom - id ="root"
+render
+<app></app>
+app.js
+
+function app(){
+any javascript
+return(
+jsx
+embed js inside jsx {}
+)
+
+}
+
+function ipl{
+ipldata=[{}]
+return(
+)
+}
+public
+src
+
+
+2. React components
+
+functional based component
+class based component
+
+create components inside src folder
+
+
+hooks,events,properties,
+integration with backend api

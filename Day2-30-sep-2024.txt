@@ -55,5 +55,11 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 JSX - Java Script and XML
 
+Assignment:
+https://olympics.com/en/paris-2024/medals
+
+Display  top 5 countries
+Also display total medals won by top 5 countries
+
 
 
