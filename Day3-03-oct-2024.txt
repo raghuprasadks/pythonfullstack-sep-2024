@@ -81,5 +81,11 @@ ajax - todos/user
 fetch api
 axios
 
+Employee
+CRUD
+https://www.w3schools.com/REACT/react_es6.asp
+spread operator
+rest
+de-structuring
 
 
