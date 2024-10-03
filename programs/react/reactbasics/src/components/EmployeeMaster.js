@@ -7,6 +7,7 @@ const EmployeeMaster = () => {
     const [desg,setDesg]=useState()
     const [sal,setSal]=useState()
     const [employees,setEmployees]=useState([])
+    const [isEdit,setIsEdit]=useState(false)
 
     const addEmployee =(event)=>{
         event.preventDefault()
@@ -29,6 +30,25 @@ const EmployeeMaster = () => {
         let afterdelete = employees.filter(employee=>employee.code != code)
         setEmployees(afterdelete)
     }
+
+    const editEmployee = (employee)=>{
+        setIsEdit(true)
+        setCode(employee.code)
+        setName(employee.name)
+        setDept(employee.dept)
+        setDesg(employee.desg)
+        setSal(employee.sal)
+    }
+
+    const updateEmployee = ()=>{
+        let updemployee = {code,name,dept,desg,sal}
+        console.log("updated employee ",updemployee)
+        let updemployeelist = employees.map((employee)=>employee.code==code?updemployee:employee)
+        setEmployees(updemployeelist)
+        setIsEdit(false)
+        resetEmployee()
+    }
+
   return (
     <>
     <div>
@@ -47,7 +67,8 @@ const EmployeeMaster = () => {
     
         <label>Salary</label>
         <input type="text" value={sal} onChange={(e)=>setSal(e.target.value)}></input><br/>
-        <button onClick={addEmployee}>Add Employee</button>
+        <button onClick={addEmployee} disabled={isEdit}>Add Employee</button>
+        <button onClick={updateEmployee} disabled={!isEdit}>Update Employee</button>
     </div>
     <div>
         <h1>Employee List</h1>
@@ -60,6 +81,7 @@ const EmployeeMaster = () => {
                 <th>Designation</th>
                 <th>Salary</th>
                 <th>Delete</th> 
+                <th>Edit</th>
             </tr>
             {
                 employees.map((employee)=>
@@ -70,6 +92,7 @@ const EmployeeMaster = () => {
                     <td>{employee.desg}</td>
                     <td>{employee.sal}</td>
                     <td><button onClick={()=>deleteEmployee(employee.code)}>Delete</button></td>
+                    <td><button onClick={()=>editEmployee(employee)}>Edit</button></td>
 
                 </tr>
                 )
