@@ -8,6 +8,7 @@ import PropertyDemo from './components/PropertyDemo';
 import ClassComponent from './components/ClassComponent';
 import Car from './components/Car';
 import SimpleInterestCalculator from './components/SimpleInterestCalculator';
+import Users from './components/Users';
 //import FunctionComponent from './components/FunctionComponent';
 
 function App() {
@@ -39,8 +40,9 @@ function App() {
       <PropertyDemo data={ipldata}></PropertyDemo>
       <ClassComponent/>
       <Car/>
+      <SimpleInterestCalculator/>
        */}
-       <SimpleInterestCalculator/>
+       <Users/>
        
        
        

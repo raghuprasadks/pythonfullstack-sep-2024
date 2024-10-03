@@ -73,3 +73,13 @@ time
 <button>Calculate</button>
 
 
+useEffect - side effect
+
+get data from backend and display
+
+ajax - todos/user
+fetch api
+axios
+
+
+
