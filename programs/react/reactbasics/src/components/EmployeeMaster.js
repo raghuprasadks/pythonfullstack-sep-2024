@@ -24,6 +24,11 @@ const EmployeeMaster = () => {
         setDesg('')
         setSal('')
     }
+
+    const deleteEmployee =(code)=>{
+        let afterdelete = employees.filter(employee=>employee.code != code)
+        setEmployees(afterdelete)
+    }
   return (
     <>
     <div>
@@ -53,7 +58,8 @@ const EmployeeMaster = () => {
                 <th>Name</th>
                 <th>Department</th>
                 <th>Designation</th>
-                <th>Salary</th>                
+                <th>Salary</th>
+                <th>Delete</th> 
             </tr>
             {
                 employees.map((employee)=>
@@ -63,6 +69,7 @@ const EmployeeMaster = () => {
                     <td>{employee.dept}</td>
                     <td>{employee.desg}</td>
                     <td>{employee.sal}</td>
+                    <td><button onClick={()=>deleteEmployee(employee.code)}>Delete</button></td>
 
                 </tr>
                 )
