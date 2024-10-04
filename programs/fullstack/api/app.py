@@ -1,5 +1,4 @@
-from flask import Flask
-
+from flask import Flask,request
 app = Flask(__name__)
 
 @app.route('/')
@@ -17,6 +16,13 @@ def welcome_name(name):
 @app.route('/welcome/<name>/<age>')
 def welcome_name_age(name, age):
     return f'Welcome to Python Flask, {name}! Your age is {age}.'
-    
+
+#http://127.0.0.1:5000/queryparam?name=ravi&age=30
+@app.route('/queryparam')
+def queryparam():
+    name = request.args.get('name')
+    age = request.args.get('age')
+    return f'Welcome to Python Flask, {name}! Your age is {age}.'
+
 if __name__ == '__main__':
     app.run()
