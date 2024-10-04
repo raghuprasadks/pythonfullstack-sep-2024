@@ -1,0 +1,37 @@
+Agenda:
+1. Pre-assessment test on python
+download and install python
+https://www.python.org/downloads/
+C:\Users\Raghu Prasad\AppData\Local\Programs\Python\Python311
+C:\Users\Raghu Prasad\AppData\Local\Programs\Python\Python311\Scripts
+
+a. create api folder under fullstack
+b. create virtual environment inside fullstack/api folder
+python -m venv myvenv
+active virtual environment
+.\myvenv\Scripts\active
+
+pip install flask
+
+pip freeze > requirements.txt
+
+
+in visual studio code
+c. Simulate productmanagement
+d. create Product class having a 
+1. constructor
+with arguments such as code,name,supplier,price
+2. write information method to return arguments and its
+values
+e. Create ProductManagement class
+create a products list
+write following methods
+addProduct(product)
+add the product to the list
+listProduct()
+display list of products
+searchBySupplier(supplier)
+return the products of the supplier
+
+2. API development using python flask
+
