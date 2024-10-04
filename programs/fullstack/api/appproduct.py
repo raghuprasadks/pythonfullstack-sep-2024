@@ -26,7 +26,7 @@ def get_products():
     return jsonify([product.__dict__ for product in products])  
 
 @app.route('/product/<code>', methods=['GET'])
-def get_product(id):
+def get_product(code):
     product = pm.get_product(code)
     if product:
         return jsonify(product.__dict__)
