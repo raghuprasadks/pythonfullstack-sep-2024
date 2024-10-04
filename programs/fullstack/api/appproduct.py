@@ -27,6 +27,7 @@ def get_products():
 
 @app.route('/product/<code>', methods=['GET'])
 def get_product(code):
+    print("get_product : code ",code)
     product = pm.get_product(code)
     if product:
         return jsonify(product.__dict__)
@@ -43,7 +44,7 @@ def update_product(code):
         return jsonify({'message': 'Product not found'}), 404
 
 @app.route('/product/<code>', methods=['DELETE'])
-def delete_product(id):
+def delete_product(code):
     if pm.delete_product(code):
         return jsonify({'message': 'Product deleted successfully'})
     else:

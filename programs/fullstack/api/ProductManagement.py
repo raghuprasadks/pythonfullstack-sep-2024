@@ -10,21 +10,31 @@ class ProductManagement():
     def get_products(self):
         return self.products
 
-    def get_product(self, name):
+    def get_product(self, code):
         for product in self.products:
-            if product.name == name:
+            if product.code == code:
                 return product
         return None
 
-    
+    """
     def update_product(self, name, price):
         product = self.get_product(name)
         if product is not None:
             product.price = price
         return product
+    """
 
-    def delete_product(self, name):
-        product = self.get_product(name)
+    def update_product(self,product):
+        for prod in self.products:
+            if prod.code == product.code:
+                prod.name = product.name
+                prod.supplier = product.supplier
+                prod.price = product.price
+                return prod
+        return None
+
+    def delete_product(self, code):
+        product = self.get_product(code)
         if product is not None:
             self.products.remove(product)
         return product
