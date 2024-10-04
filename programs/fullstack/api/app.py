@@ -1,18 +1,22 @@
 from flask import Flask,request
 app = Flask(__name__)
 
+#http://127.0.0.1:5000/
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
 
+#http://127.0.0.1:5000/welcome
 @app.route('/welcome')
 def welcome():
     return 'Welcome to Python Flask!'
 
+#http://127.0.0.1:5000/welcome/ravi
 @app.route('/welcome/<name>')
 def welcome_name(name):
     return f'Welcome to Python Flask, {name}!'
 
+#http://127.0.0.1:5000/welcome/ravi/30
 @app.route('/welcome/<name>/<age>')
 def welcome_name_age(name, age):
     return f'Welcome to Python Flask, {name}! Your age is {age}.'
