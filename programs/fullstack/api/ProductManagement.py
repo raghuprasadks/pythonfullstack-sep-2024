@@ -28,7 +28,7 @@ class ProductManagement():
         if product is not None:
             self.products.remove(product)
         return product
-
+"""
 pm = ProductManagement()
 prod1 = Product("1","Laptop","Dell","45000")
 prod2 = Product("2","Mobile","Samsung","25000")
@@ -55,3 +55,4 @@ print("after deletion")
 prodlist =pm.get_products()
 for prod in prodlist:
     print(prod)
+"""
