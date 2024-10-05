@@ -15,7 +15,11 @@ const Products = () => {
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(product)
         }).then((response)=>response.json())
-        .then((data)=>getProducts())
+        .then((data)=>{
+            console.log("add product response ",data)
+            getProducts()
+            resetProduct()
+        })
         .catch((error)=>console.log(error))      
      
     }
@@ -36,6 +40,18 @@ const Products = () => {
     useEffect(()=>{
         getProducts();
     },[])
+
+    const deleteProduct=(id)=>{
+        console.log("delete product id ",id)
+        fetch(url+"/"+id,{
+            method:"DELETE"
+        }).then((response)=>response.json())
+        .then((data)=>{
+            console.log("delete product response ",data)
+            getProducts()
+        })
+        .catch((error)=>console.log(error))      
+    }
 
     return (
     <>
@@ -60,6 +76,7 @@ const Products = () => {
                     <th>Product Name</th>
                     <th>Brand</th>
                     <th>Price</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,6 +87,7 @@ const Products = () => {
                                 <td>{product.name}</td>
                                 <td>{product.brand}</td>
                                 <td>{product.price}</td>
+                                <td><button onClick={()=>deleteProduct(product.id)}>Delete</button></td>
                             </tr>
                         )
                     })
