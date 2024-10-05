@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 
 const Products = () => {
+    const [id,setId]=useState(0);
     const [name,setName]=useState("");
     const [brand,setBrand]=useState("");
     const [price,setPrice]=useState(0);
@@ -53,6 +54,29 @@ const Products = () => {
         .catch((error)=>console.log(error))      
     }
 
+    const editProduct=(product)=>{
+        console.log("edit product ",product)
+        setId(product.id)
+        setName(product.name)
+        setBrand(product.brand)
+        setPrice(product.price)
+    }
+
+    const  updateProduct=()=>{
+        let product={name,brand,price};
+        fetch(url+"/"+id,{
+            method:"PUT",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(product)
+        }).then((response)=>response.json())
+        .then((data)=>{
+            console.log("update product response ",data)
+            getProducts()
+            resetProduct()
+        })
+        .catch((error)=>console.log(error))      
+    }
+
     return (
     <>
     
@@ -65,6 +89,7 @@ const Products = () => {
         <label>Price</label>
         <input type="number" placeholder="Enter Product Price" value ={price} onChange={(event)=>setPrice(event.target.value)}/><br/>
         <button onClick={addProduct}>Add Product</button>
+        <button onClick={updateProduct}>Update Product</button>
         
     </div>
     
@@ -77,6 +102,7 @@ const Products = () => {
                     <th>Brand</th>
                     <th>Price</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -88,6 +114,7 @@ const Products = () => {
                                 <td>{product.brand}</td>
                                 <td>{product.price}</td>
                                 <td><button onClick={()=>deleteProduct(product.id)}>Delete</button></td>
+                                <td><button onClick={()=>editProduct(product)}>Edit</button></td>
                             </tr>
                         )
                     })
