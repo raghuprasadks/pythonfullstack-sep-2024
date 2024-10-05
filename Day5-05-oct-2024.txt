@@ -1,0 +1,67 @@
+Agenda:
+
+1. Interfacing flask with database namely MySQL
+2. API development with MySQL
+3. Full stack - end to end programming - React,Flask,mysql
+
+Pre-requisites
+1. SQL Commands
+
+Assignment on MySQL
+1. create demodb
+2. create product table
+having following columns
+id - int - pk - auto increment
+name - varchar(100) not null
+brand - varchar(100) not null
+price - int
+
+CREATE TABLE `demodblatest`.`product` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `brand` VARCHAR(100) NOT NULL,
+  `price` INT NULL,
+  PRIMARY KEY (`id`));
+
+3. Basic crud using sql
+insert atleast 5 product of different brands
+insert into product(name,brand,price) values('smart phone','samsung',40000)
+
+select queries
+update
+delete
+
+insert into product(name,brand,price) values('smart tv','sony',60000);
+insert into product(name,brand,price) values('laptop','hp',70000);
+
+select * from product
+select * from product where brand ='hp'
+update product set price = 80000 where id=3
+select * from product
+delete from product where id =2
+
+steps for developing product api
+
+1. create product table
+2. activate virtual environment
+.\myvenv\Scripts\activate
+3. install pymysql
+pip install pymysql
+4. create config.py
+5. create ProductNew.py
+6. create approductcrud.py
+7. test using postman
+
+steps to integrate backend with react app
+1. create a react application inside fullstack folder
+npx create-react-app ui
+2. create components folder inside src
+3. create Products.js functional component inside components folder
+Develop Add Product Functionality
+
+
+
+
+
+
+

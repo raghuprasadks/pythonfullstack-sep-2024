@@ -15,7 +15,7 @@ pip install flask
 
 pip freeze > requirements.txt
 
-
+pip install -r requirements.txt
 in visual studio code
 c. Simulate productmanagement
 d. create Product class having a 
@@ -34,4 +34,37 @@ searchBySupplier(supplier)
 return the products of the supplier
 
 2. API development using python flask
+api for product crud
+
+3. Develop following API's for customer
+
+post http://127.0.0.1/customer
+customer with following attributes
+code,name,email,mobile,location,pincode
+
+get http://127.0.0.1/customer
+display all the customsers
+get http://127.0.0.1/customer/code
+display customer with the given code
+
+put http://127.0.0.1/customer/code
+update customer 
+
+delete http://127.0.0.1/customer/code
+delete customer with the given code
+
+get http://127.0.0.1/customerbylocation/location
+display customer in a specific location
+
+get http://127.0.0.1/customerbypincode/pincode
+display customer with a specific pincode
+
+
+
+
+
+
+
+
+
 

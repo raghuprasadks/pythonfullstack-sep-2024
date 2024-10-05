@@ -10,6 +10,7 @@ import Car from './components/Car';
 import SimpleInterestCalculator from './components/SimpleInterestCalculator';
 import Users from './components/Users';
 import EmployeeMaster from './components/EmployeeMaster';
+import Products from './Products';
 //import FunctionComponent from './components/FunctionComponent';
 
 function App() {
@@ -43,8 +44,10 @@ function App() {
       <Car/>
       <SimpleInterestCalculator/>
       <Users/>
-       */}
        <EmployeeMaster/>
+       */}
+       <Products/>
+       
        
        
        
