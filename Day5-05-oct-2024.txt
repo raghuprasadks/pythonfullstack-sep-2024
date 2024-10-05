@@ -68,6 +68,20 @@ pip install cryptography
 pip install --upgrade pymysql
 
 
+assignment:
+
+1. Develop API and front end to 
+search by brand
+
+http://localhost:3000/productbybrand/<brand>
+
+2. search by price range
+
+http://localhost:3000/productbyrange/min/max
+
+
+
+
 
 
 
