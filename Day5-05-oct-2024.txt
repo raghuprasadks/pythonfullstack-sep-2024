@@ -59,6 +59,12 @@ npx create-react-app ui
 3. create Products.js functional component inside components folder
 Develop Add Product Functionality
 
+CORS - Cross Origin Resource Sharing
+
+https://pypi.org/project/Flask-Cors/
+
+
+
 
 
 
