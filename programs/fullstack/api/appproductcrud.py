@@ -21,6 +21,8 @@ def get_db_connection():
 @app.route('/product', methods=['POST'])
 def create_product():
     data = request.get_json()
+   #price = int(data['price'])
+    print("create product ",data)
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("INSERT INTO products (name, brand, price) VALUES (%s, %s, %s)",

@@ -6,7 +6,7 @@ const Products = () => {
     const [price,setPrice]=useState(0);
     const [products,setProducts]=useState([]);
 
-    const url = "http://localhost:5000/product";
+    const url = "http://127.0.0.1:5000/product";
 
     const addProduct=()=>{
         let product={name,brand,price};
@@ -15,7 +15,8 @@ const Products = () => {
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(product)
         }).then((response)=>response.json())
-        .then((data)=>setProducts(data))      
+        .then((data)=>getProducts())
+        .catch((error)=>console.log(error))      
      
     }
 
@@ -24,6 +25,17 @@ const Products = () => {
         setBrand("");
         setPrice(0);
     }
+
+    const getProducts=()=>{ 
+        fetch(url)
+        .then((response)=>response.json())
+        .then((data)=>setProducts(data))
+        .catch((error)=>console.log(error))
+    }
+
+    useEffect(()=>{
+        getProducts();
+    },[])
 
     return (
     <>
@@ -39,6 +51,7 @@ const Products = () => {
         <button onClick={addProduct}>Add Product</button>
         
     </div>
+    
     <div>
         <h1>Product List</h1>
         <table>
@@ -64,6 +77,7 @@ const Products = () => {
             </tbody>
         </table>
     </div>
+     
 
     </>
   )

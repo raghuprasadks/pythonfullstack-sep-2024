@@ -64,7 +64,8 @@ CORS - Cross Origin Resource Sharing
 https://pypi.org/project/Flask-Cors/
 
 
-
+pip install cryptography
+pip install --upgrade pymysql
 
 
 
