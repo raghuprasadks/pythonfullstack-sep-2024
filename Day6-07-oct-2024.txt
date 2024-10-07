@@ -1,0 +1,43 @@
+Agenda:
+
+Practice sessions
+1. w3schools javascript quiz
+https://www.w3schools.com/js/js_quiz.asp
+
+2. React Quiz
+https://www.w3schools.com/react/react_quiz.asp
+3. python quiz
+https://www.w3schools.com/python/python_quiz.asp
+
+4. React application Development using
+routing
+go to fullstack folder
+npx create-react-app reactroutes
+cd reactroutes
+code .
+Open terminal
+npm install react-router-dom
+
+create pages folder inside src folder
+
+/
+http://localhost:3000/
+Route /
+home component is loaded
+
+http://localhost:3000/blogs
+
+http://localhost:3000/contact
+
+
+clone a project from git
+git clone <url>
+cd url
+npm install
+
+
+
+
+
+
+
