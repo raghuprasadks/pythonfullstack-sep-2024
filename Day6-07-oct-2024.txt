@@ -30,12 +30,29 @@ http://localhost:3000/blogs
 http://localhost:3000/contact
 
 
+
 clone a project from git
 git clone <url>
 cd url
 npm install
 
 
+Programming assignment
+Refer to assignment.xlsx in git for the UI
+1. Create SignUp component under pages
+2. Add a route to signup
+
+3. Develop a backend 
+create apinnew folder
+create virtual environment
+activate virtual environment
+create user table in MySQL database
+having following fields
+id - int - pk - auto increment
+name - varchar(100) not null
+email - varchar(100) unique
+mobile - big int not null
+password - varchar(100)
 
 
 
