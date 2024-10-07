@@ -1,0 +1,81 @@
+Day 1 - Java Script
+defining variable
+data types - Boolean,number,string,object,null,undefined
+
+name="ravi"
+typeof(name)
+
+var,let , const
+
+loops,if,else
+function
+arrow function
+
+add = (n1,n2)=>n1+n2
+
+map,filter,reduce - higher order function
+function (argument function)
+
+function constructure
+ajax
+fetch(url) - get method
+fetch(url,{
+method:"post",
+
+})
+parse(json) - java script
+stringfy(javascript object) - json
+jsonplaceholder -fake api
+
+React
+Component based architecture
+virtual dom
+single page application
+index.html
+routing - navigating through components
+npx create-react-app <appname>
+package.json
+{
+}
+npm i react-router-dom
+react - parent - child - property ,state
+hooks
+useState,useEffect
+useContext,
+custom hooks
+
+fetch api
+axios
+3000
+
+api
+python - class,object,constructor (__init__)
+
+crud operation - create,deleting,update,reading
+flask - micro web api
+virtual environment
+python -m venv venv
+.\venv\Scripts\activate
+pip install flask
+api 
+postman
+MySQL database - my sql server,workbench
+creating database,table, crud
+flask with MySQL pymysql
+front end -- url - <restful webservice>
+http://localhost:5000/user
+fetch api - crud
+model - regression,classification
+
+https://ekaushalya.kaushalya.tech/
+
+
+
+
+
+
+
+
+
+
+

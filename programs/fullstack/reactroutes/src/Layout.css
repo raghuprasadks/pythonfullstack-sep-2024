@@ -1,0 +1,54 @@
+/* Layout.css */
+
+/* Base styles */
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the root element takes full height */
+}
+
+header, footer {
+  background-color: #F3F9FE; /* Light blue Microsoft color */
+  color: #0078D4; /* Microsoft blue for text */
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  flex: 1; /* Take up remaining space */
+  padding: 1em;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0078D4; /* Microsoft blue for links */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
